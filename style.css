@@ -57,3 +57,19 @@ h1 { margin-top: 10px; font-size: 28px; }
 }
 .search button:hover { background: #4f46e5; }
 .search button:active { transform: scale(0.96); }
+
+.status { min-height: 22px; margin: 14px 0 6px; font-size: 14px; color: #6b7280; }
+.status.error { color: #dc2626; }
+
+.result { display: grid; gap: 8px; }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #f3f4f6;
+}
+.row dt { font-size: 13px; font-weight: 600; color: #6b7280; text-transform: uppercase; }
+.row dd { font-weight: 600; text-align: right; }
