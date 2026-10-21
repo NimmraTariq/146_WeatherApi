@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location Finder - Nimra 20240140146</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <header>
+      <span class="badge">Web Service Assignment</span>
+      <h1>Location Finder</h1>
+      <p class="sub">Nimra · 20240140146</p>
+    </header>
+
+    <form id="form" class="search">
+      <input id="location" type="text" placeholder="Example: Bantul" autocomplete="off" required>
+      <button type="submit">Search</button>
+    </form>
+
+    <p id="status" class="status"></p>
+
+    <dl id="result" class="result" hidden>
+      <div class="row"><dt>Country</dt><dd id="country">-</dd></div>
+      <div class="row"><dt>Province</dt><dd id="province">-</dd></div>
+      <div class="row"><dt>District</dt><dd id="district">-</dd></div>
+      <div class="row"><dt>Longitude</dt><dd id="longitude">-</dd></div>
+      <div class="row"><dt>Latitude</dt><dd id="latitude">-</dd></div>
+    </dl>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
