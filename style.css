@@ -9,3 +9,51 @@ body {
   color: #1f2937;
   background: linear-gradient(135deg, #38bdf8, #6366f1 55%, #a855f7);
 }
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  padding: 28px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4338ca;
+  background: #e0e7ff;
+}
+
+h1 { margin-top: 10px; font-size: 28px; }
+.sub { margin-bottom: 20px; color: #6b7280; font-size: 14px; }
+
+.search { display: flex; gap: 8px; }
+
+.search input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+}
+.search input:focus { border-color: #6366f1; }
+
+.search button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: #6366f1;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.2s;
+}
+.search button:hover { background: #4f46e5; }
+.search button:active { transform: scale(0.96); }
