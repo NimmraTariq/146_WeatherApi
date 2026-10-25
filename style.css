@@ -6,70 +6,23 @@ body {
   place-items: center;
   padding: 24px;
   font-family: "Segoe UI", system-ui, sans-serif;
-  color: #1f2937;
-  background: linear-gradient(135deg, #38bdf8, #6366f1 55%, #a855f7);
+  color: #e5e7eb;
+  background-color: #0b1020;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  overflow-x: hidden;
 }
 
-.card {
-  width: 100%;
-  max-width: 420px;
-  padding: 28px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+.glow {
+  position: fixed;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.45;
+  z-index: 0;
 }
-
-.badge {
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #4338ca;
-  background: #e0e7ff;
-}
-
-h1 { margin-top: 10px; font-size: 28px; }
-.sub { margin-bottom: 20px; color: #6b7280; font-size: 14px; }
-
-.search { display: flex; gap: 8px; }
-
-.search input {
-  flex: 1;
-  padding: 12px 14px;
-  border: 2px solid #e5e7eb;
-  border-radius: 12px;
-  font-size: 15px;
-  outline: none;
-}
-.search input:focus { border-color: #6366f1; }
-
-.search button {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 12px;
-  font-size: 15px;
-  font-weight: 600;
-  color: #fff;
-  background: #6366f1;
-  cursor: pointer;
-  transition: transform 0.1s, background 0.2s;
-}
-.search button:hover { background: #4f46e5; }
-.search button:active { transform: scale(0.96); }
-
-.status { min-height: 22px; margin: 14px 0 6px; font-size: 14px; color: #6b7280; }
-.status.error { color: #dc2626; }
-
-.result { display: grid; gap: 8px; }
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 12px 14px;
-  border-radius: 12px;
-  background: #f3f4f6;
-}
-.row dt { font-size: 13px; font-weight: 600; color: #6b7280; text-transform: uppercase; }
-.row dd { font-weight: 600; text-align: right; }
+.glow-a { top: -80px; left: -80px; background: #22d3ee; }
+.glow-b { bottom: -100px; right: -80px; background: #f43f5e; }
