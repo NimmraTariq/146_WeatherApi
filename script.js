@@ -1,4 +1,4 @@
-const API_KEY = "9aGIr2YciyGPrmJYDNxs";
+const API_KEY = "9aGIr2YciyGPrmJYDNxs"; 
 
 const form = document.getElementById("form");
 const input = document.getElementById("location");
@@ -20,3 +20,18 @@ form.addEventListener("submit", async (e) => {
     console.error(err);
   }
 });
+
+// find a value (country, province, etc.) in the API response by its type
+function findByType(feature, types) {
+  const all = [feature, ...(feature.context || [])];
+  for (const type of types) {
+    const item = all.find((c) => c.id && c.id.startsWith(type + "."));
+    if (item) return item.text;
+  }
+  return "-";
+}
+
+// put text into an element by its id
+function setText(id, value) {
+  document.getElementById(id).textContent = value;
+}
