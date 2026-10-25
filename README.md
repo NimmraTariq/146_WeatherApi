@@ -24,4 +24,4 @@ Student ID: 20240140146
 ![Result](screenshots/result.png)
 
 ## GET response in the browser
-![API response](screenshots/api-response.png)
+<img width="775" height="891" alt="image" src="https://github.com/user-attachments/assets/d13d73aa-781a-4f0a-8ed5-c263fec1872e" />
