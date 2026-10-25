@@ -1,4 +1,4 @@
-const API_KEY = 9aGIr2YciyGPrmJYDNxs;
+const API_KEY = "9aGIr2YciyGPrmJYDNxs";
 
 const form = document.getElementById("form");
 const input = document.getElementById("location");
