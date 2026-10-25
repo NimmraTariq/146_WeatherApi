@@ -3,31 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Location Finder - Nimra 20240140146</title>
+  <title>GeoScope - Nimra 20240140146</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="card">
-    <header>
-      <span class="badge">Web Service Assignment</span>
-      <h1>Location Finder</h1>
-      <p class="sub">Nimra · 20240140146</p>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+
+  <main class="panel">
+    <header class="top">
+      <div class="pin">📍</div>
+      <div>
+        <h1>GeoScope</h1>
+        <p class="sub">Location lookup · Nimra · 20240140146</p>
+      </div>
     </header>
 
     <form id="form" class="search">
-      <input id="location" type="text" placeholder="Example: Bantul" autocomplete="off" required>
-      <button type="submit">Search</button>
+      <input id="location" type="text" placeholder="Search a place, e.g. Bantul" autocomplete="off" required>
+      <button type="submit">Scan</button>
     </form>
 
     <p id="status" class="status"></p>
 
-    <dl id="result" class="result" hidden>
-      <div class="row"><dt>Country</dt><dd id="country">-</dd></div>
-      <div class="row"><dt>Province</dt><dd id="province">-</dd></div>
-      <div class="row"><dt>District</dt><dd id="district">-</dd></div>
-      <div class="row"><dt>Longitude</dt><dd id="longitude">-</dd></div>
-      <div class="row"><dt>Latitude</dt><dd id="latitude">-</dd></div>
-    </dl>
+    <section id="result" class="result" hidden>
+      <div class="tile wide"><span class="label">Place name</span><strong id="placeName">-</strong></div>
+      <div class="tile"><span class="label">Matching text</span><strong id="matchingText">-</strong></div>
+      <div class="tile"><span class="label">Type</span><strong id="type">-</strong></div>
+      <div class="tile"><span class="label">Country</span><strong id="country">-</strong></div>
+      <div class="tile"><span class="label">Province</span><strong id="province">-</strong></div>
+      <div class="tile"><span class="label">District</span><strong id="district">-</strong></div>
+      <div class="tile"><span class="label">Coordinates</span><strong id="coordinates">-</strong></div>
+      <div class="tile"><span class="label">Longitude</span><strong id="longitude">-</strong></div>
+      <div class="tile"><span class="label">Latitude</span><strong id="latitude">-</strong></div>
+      <iframe id="map" class="map" title="Map of the location" loading="lazy"></iframe>
+    </section>
   </main>
 
   <script src="script.js"></script>
