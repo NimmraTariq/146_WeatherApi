@@ -10,14 +10,23 @@ form.addEventListener("submit", async (e) => {
   const q = input.value.trim();
   if (!q) return;
 
+  statusEl.className = "status";
+  statusEl.textContent = "Scanning...";
+  result.hidden = true;
+
   const url = `https://api.maptiler.com/geocoding/${encodeURIComponent(q)}.json?key=${API_KEY}&limit=1&language=en`;
 
   try {
     const res = await fetch(url);
+    if (!res.ok) throw new Error("Request failed (" + res.status + ")");
     const data = await res.json();
+    if (!data.features.length) throw new Error("Location not found");
     console.log(data);
+    statusEl.textContent = "";
+    showResult(data);
   } catch (err) {
-    console.error(err);
+    statusEl.className = "status error";
+    statusEl.textContent = err.message;
   }
 });
 
